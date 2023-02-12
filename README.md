@@ -1,4 +1,4 @@
-# Welcome to the dbt Cloud large Project Simulation 
+# Welcome to the dbt Cloud XXXL Project Simulation 
 
 ## The purpose of this project is to simulation an extremely large monorepo implementation in dbt Cloud
 </br>
@@ -8,14 +8,14 @@
     - 27 sources
 - **Models**
     - _Staging_
-        - 28 models
+        - 27 models
     - _Intermediate Models_
-        - 3003 models
+        - 15,003 models
     - _Core Reporting Models_
-        - 1001 models
+        - 10,001 models
     - _Roll Up Models_
-        - 1501 models
+        - 7,501 models
     - _Dashboard Connected Models_
-        - 1501 models
+        - 7,501 models
 
-### Total Models in Project: 7034
+### Total Models in Project: 15,040
