@@ -1,15 +1,15 @@
 with model_a as
   (select * exclude unqiue_key,
             unqiue_key as model_a_unqiue_key
-   from {{ ref('stg__sample_salesforce_data_accounts') }}),
+   from {{ ref('stg__jaffle_shop_dim_customers') }}),
      model_b as
   (select * exclude unqiue_key,
             unqiue_key as model_b_unqiue_key
-   from {{ ref('stg__medicare_sample_data_medicare_samples__2010_beneficiary_summary_file_sample') }}),
+   from {{ ref('stg__sample_salesforce_data_leads') }}),
      model_c as
   (select * exclude unqiue_key,
             unqiue_key as model_c_unqiue_key
-   from {{ ref('stg__tpch_data_part') }}),
+   from {{ ref('stg__sample_salesforce_data_contacts') }}),
      joined_models as
   (select a.*,
           b.*,
