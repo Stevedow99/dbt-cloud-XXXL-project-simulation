@@ -1,15 +1,15 @@
 with model_a as
   (select * exclude unqiue_key,
             unqiue_key as model_a_unqiue_key
-   from {{ ref('stg__jaffle_shop_orders') }}),
+   from {{ ref('stg__tpch_data_nation') }}),
      model_b as
   (select * exclude unqiue_key,
             unqiue_key as model_b_unqiue_key
-   from {{ ref('stg__medicare_sample_data_medicare_samples__2008_to_2010_outpatient_claims_sample') }}),
+   from {{ ref('stg__tpch_data_orders') }}),
      model_c as
   (select * exclude unqiue_key,
             unqiue_key as model_c_unqiue_key
-   from {{ ref('stg__jaffle_shop_customers') }}),
+   from {{ ref('stg__subscription_data_order_product') }}),
      joined_models as
   (select a.*,
           b.*,

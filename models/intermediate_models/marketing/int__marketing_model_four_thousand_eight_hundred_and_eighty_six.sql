@@ -9,7 +9,7 @@ with model_a as
      model_c as
   (select * exclude unqiue_key,
             unqiue_key as model_c_unqiue_key
-   from {{ ref('stg__jaffle_shop_orders') }}),
+   from {{ ref('stg__tpch_data_nation') }}),
      joined_models as
   (select a.*,
           b.*,
