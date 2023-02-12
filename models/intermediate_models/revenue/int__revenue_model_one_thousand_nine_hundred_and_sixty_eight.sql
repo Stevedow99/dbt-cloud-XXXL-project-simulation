@@ -5,7 +5,7 @@ with model_a as
      model_b as
   (select * exclude unqiue_key,
             unqiue_key as model_b_unqiue_key
-   from {{ ref('stg__jaffle_shop_customers') }}),
+   from {{ ref('stg__subscription_data_product') }}),
      joined_models as
   (select a.*,
           b.*

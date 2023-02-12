@@ -5,11 +5,11 @@ with model_a as
      model_b as
   (select * exclude unqiue_key,
             unqiue_key as model_b_unqiue_key
-   from {{ ref('stg__medicare_sample_data_medicare_samples__2009_beneficiary_summary_file_sample') }}),
+   from {{ ref('stg__sample_salesforce_data_contacts') }}),
      model_c as
   (select * exclude unqiue_key,
             unqiue_key as model_c_unqiue_key
-   from {{ ref('stg__stripe_payment') }}),
+   from {{ ref('stg__tpch_data_lineitem') }}),
      joined_models as
   (select a.*,
           b.*,

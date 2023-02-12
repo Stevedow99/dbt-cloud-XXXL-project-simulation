@@ -1,15 +1,15 @@
 with model_a as
   (select * exclude unqiue_key,
             unqiue_key as model_a_unqiue_key
-   from {{ ref('stg__subscription_data_account') }}),
+   from {{ ref('stg__sample_customer_data_purchases_fct') }}),
      model_b as
   (select * exclude unqiue_key,
             unqiue_key as model_b_unqiue_key
-   from {{ ref('stg__jaffle_shop_orders') }}),
+   from {{ ref('stg__sample_customer_data_purchases_fct') }}),
      model_c as
   (select * exclude unqiue_key,
             unqiue_key as model_c_unqiue_key
-   from {{ ref('stg__subscription_data_product') }}),
+   from {{ ref('stg__sample_salesforce_data_leads') }}),
      joined_models as
   (select a.*,
           b.*,

@@ -1,11 +1,11 @@
 with model_a as
   (select * exclude unqiue_key,
             unqiue_key as model_a_unqiue_key
-   from {{ ref('stg__stripe_payment') }}),
+   from {{ ref('stg__sample_salesforce_data_leads') }}),
      model_b as
   (select * exclude unqiue_key,
             unqiue_key as model_b_unqiue_key
-   from {{ ref('stg__tpch_data_part') }}),
+   from {{ ref('stg__jaffle_shop_orders') }}),
      joined_models as
   (select a.*,
           b.*
