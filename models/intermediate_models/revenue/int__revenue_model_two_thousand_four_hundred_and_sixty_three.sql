@@ -1,11 +1,11 @@
 with model_a as
   (select * exclude unqiue_key,
             unqiue_key as model_a_unqiue_key
-   from {{ ref('stg__sample_salesforce_data_contacts') }}),
+   from {{ ref('stg__tpch_data_partsupp') }}),
      model_b as
   (select * exclude unqiue_key,
             unqiue_key as model_b_unqiue_key
-   from {{ ref('stg__sample_salesforce_data_accounts') }}),
+   from {{ ref('stg__subscription_data_order_product') }}),
      joined_models as
   (select a.*,
           b.*
